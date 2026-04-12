@@ -1,0 +1,40 @@
+{
+	"name": "react02",
+	"version": "1.0.0",
+	"description": "My first react project 02",
+	"keywords": [
+		"md",
+		"sufiyan",
+		"first"
+	],
+	"homepage": "https://github.com/iammdsufiyan/React_net#readme",
+	"bugs": {
+		"url": "https://github.com/iammdsufiyan/React_net/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/iammdsufiyan/React_net.git"
+	},
+	"license": "ISC",
+	"author": "",
+	"scripts": {
+		"test": "jest"
+	},
+	"devDependencies": {
+		"parcel": "^2.16.4"
+	},
+	"dependencies": {
+		"react": "^19.2.5",
+		"react-dom": "^19.2.5"
+	},
+	"Resources": {
+		"Component": {
+			"Type": "AWS::AmplifyUIBuilder::Component",
+			"Properties": {}
+		},
+		"ClientCertificate": {
+			"Type": "AWS::ApiGateway::ClientCertificate",
+			"Properties": {}
+		}
+	}
+}

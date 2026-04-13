@@ -1,24 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const parent = React.createElement(
-  "div", 
-  { id: "parent" }, 
-  [ // This is an array, so items inside need keys
-    React.createElement("div", { id: "child", key: "section-1" }, [ 
-      // Another array, items inside need keys
-      React.createElement("h1", { key: "title-1" }, "first js"),
-      React.createElement("h1", { key: "title-2" }, "Md Sufiyan js")
-    ]),
-    React.createElement("div", { key: "section-2" }, [
-      // Another array, items inside need keys
-      React.createElement("h1", { key: "title-3" }, "Md Danish js"),
-      React.createElement("h1", { key: "title-4" }, "Md dilshad ")
-    ])
-  ]
-);
 
+
+        const jsxHeading = <h1 id = "heading"></h1>;
         const root = ReactDOM.createRoot(document.getElementById("root"));
-        
-        root.render(parent);
+        const ElementOfReact = ()=> <h1>this is a elemet of react made by jsx</h1>
+        const Title = ()=>{
+          return <h1>this is a react functional component</h1>
+        }
+        const Heading2 = () =>( 
+          <div>
+            <Title/> 
+            <ElementOfReact/>
+        <h1>this is react functional componenet without return</h1>
+          </div>)
+       
+      
+        root.render(<Heading2/>);
 
       //  console.log(parent)

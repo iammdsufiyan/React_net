@@ -18,6 +18,8 @@
 	"license": "ISC",
 	"author": "",
 	"scripts": {
+		"start": "parcel index.html",
+		"build":"parcel build index.html",
 		"test": "jest"
 	},
 	"devDependencies": {
@@ -26,15 +28,5 @@
 	"dependencies": {
 		"react": "^19.2.5",
 		"react-dom": "^19.2.5"
-	},
-	"Resources": {
-		"Component": {
-			"Type": "AWS::AmplifyUIBuilder::Component",
-			"Properties": {}
-		},
-		"ClientCertificate": {
-			"Type": "AWS::ApiGateway::ClientCertificate",
-			"Properties": {}
-		}
 	}
 }

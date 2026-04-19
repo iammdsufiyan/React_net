@@ -1,6 +1,8 @@
 import Restaurentcard from "./Restaurentcard ";
 import resList from "../utils/Blanckdata";
 import { useState } from "react";
+import { useEffect } from "react";
+import Shimmer from "./Shimmer";
 // let listofRestaurent = [{
     
    
@@ -54,6 +56,9 @@ import { useState } from "react";
 
 
 const Body = ()=> {
+
+
+
   const [listofRestaurent, setlistofRestaurent] = useState([{data: {
       type: 'F',
       id: '121603',
@@ -96,19 +101,47 @@ const Body = ()=> {
       },
     }]);
 
+    const [searchText, setsearchText] = useState("");
+
+    useEffect(()=>{
+      console.log("useEffect is called ");
+    }, [])
+
+   // console.log("body called")
+
+      if(listofRestaurent.length === 0){
+        return  <Shimmer/>;
+      }
+
       return (
         <div className="body">
-          <div className="filter-btn"> <button  className="button-filter"
+          <div className="rated-search">
+            <div className="filter-btn"> <button  className="button-filter"
       onClick={() => {
         const filtered = listofRestaurent.filter((res) => {
           return res.data.avgRating > 4; 
         });
 
       setlistofRestaurent(filtered);
-        console.log(filtered);
+      //  console.log(filtered);
           }}>
             Top Rated Restauren 
             </button></div>
+         
+         <div className="search">
+          <input className="search-res" type="text" value={searchText}  onChange={(e)=>{setsearchText(e.target.value)}}></input>
+          <button className="serach-button" onClick={( )=>{ 
+         const filterRestaurent = listofRestaurent.filter(
+          (res)=>{ 
+            return res.data.name.toLowerCase().includes(searchText.toLowerCase());
+             console.log(filterRestaurent)
+          }
+             
+            )
+            setlistofRestaurent(filterRestaurent);
+          }   }>search </button>
+         </div>
+          </div>
           <div className="res-container">
            
             {

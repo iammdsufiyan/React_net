@@ -1,6 +1,7 @@
-
 import { useState } from "react";
 import { CDN_URL } from "../utils/CDN";
+import AboutUs from "./AboutUs";
+import { Link } from "react-router-dom";
 const Header = () => {
     const [btnlogin, setbtnlogin] = useState("login");
     
@@ -11,9 +12,14 @@ const Header = () => {
         </div>
           <div className="nav-item">
               <ul>
-                <li>   Home  </li>
-                <li>  About us </li>
-                <li> Contact us</li>
+                <li >   
+                  <Link to = "/"> Home</Link> </li>
+               <li  >
+                <Link to = "/aboutus">AboutUs</Link>
+               </li>
+                <li> 
+                     <Link to = "/contactus">ContactUs</Link>
+                </li>
                  <li>Cart</li>
                  <button className="btnlogin" onClick={()=>{
               if(btnlogin === "login"){

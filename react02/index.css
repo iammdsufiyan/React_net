@@ -11,6 +11,7 @@
 
 .nav-item> ul{
         display: flex;
+   
 
 }
 .nav-item{
@@ -113,4 +114,11 @@
 .serach-button:hover {
   background-color: #0056b3;
   border-color: #0056b3;
+}
+
+.btnaboutus{
+    cursor: pointer;
+    font-weight: 1000;
+    font-size: large;
+    margin-top: 23px;
 }
